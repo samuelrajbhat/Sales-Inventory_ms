@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Addition</title>
+  <script src="inventory.js"></script>
+</head>
+<body>
+  
+        
+
+  <form>
+   
+  <div>
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName">
+  </div>
+  <div>
+    <label for="productDescription">Product Description:</label>
+    <textarea id="productDescription" name="productDescription"></textarea>
+  </div>
+  <div>
+    <label for="costPrice">Cost Price:</label>
+    <input type="text" id="costPrice" name="costPrice">
+  </div>
+  <div>
+    <label for="sellingPrice">Selling Price:</label>
+    <input type="text" id="sellingPrice" name="sellingPrice">
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity">
+  </div>
+  
+  <div>
+    <label for="category">Category</label>
+    <select id="category">
+      <option value="foods">Foods</option>
+      <option value="drinks">Drinks</option>
+      <option value="beauty">Beauty</option>
+      <option value="health">Health</option>
+      <option value="sanitation">Sanitation</option>
+      <option value="stationery">Stationery</option>
+      <option value="utensils">Utensils</option>
+      <option value = "tools">Tools</option>
+    </select>
+  </div>
+  <div>
+    <label>Manufacturer </label>
+    <input type="text" id="manufacturer">
+  </div>
+  <div>
+    <button name="submit" onclick="submitForm()">Submit</button>
+  </div>
+</form>
+
+
+<form action="../chart/inventorychart.php" method="get">
+<button type="submit">View Status</button>
+</form>
+
+<form id="updateTriggerForm" action="createview.php" method="post">
+  <button type="submit" name="updateTriggerBtn">Update Trigger</button>
+</form>
+
+</body>
+</html>
+
