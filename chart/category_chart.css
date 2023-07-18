@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#chart_container {
+    width: 900px;
+    height: 400px;
+    margin: 20px auto;
+}
+#go_back {
+    margin-top: 5px;
+}
+#go_back button {
+   padding: 10px 20px;
+   font-size: 16px;
+   background-color: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+}
+#go_back .tooltip {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+#go_back button:hover+.tooltip {
+    opacity: 1;
+}
