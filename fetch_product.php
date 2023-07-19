@@ -15,4 +15,6 @@ if (isset($_GET['product_id'])) {
     echo ''; // Return an empty string if product ID is not found
   }
 }
+$connection->close();
+
 ?>
