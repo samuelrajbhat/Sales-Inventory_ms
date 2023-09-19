@@ -5,29 +5,33 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   
   <script>
-    </script>
+    //this page is sales page.
+    //it handles sales task. It integrates multiple functions from fetch_product.php fetch_sales_data.js connection.php and so on. 
+    //It records sales transaction data in sales table
+   </script>
 </head>
 <body>
   <h1>Sales Booth</h1>
-  <script src="fetch_sales_data.js"></script>
-  
- 
   <form id="salesForm" method="POST">
     <table id="salesTable">
         <tr>
-            <th><label for="product_id" >Product Id</label></th>
-            <th><label for="product_name">Product Name</label></th>
-            <th><label for="product_sp">Price</label></th>
-            <th><label for="quantity"> Quantity</label></th>
-            <th><label for="total"> Total</label></th>
+           <div class="Labels">
+            <th><label id="product_id">Product Id</label></th>
+            <th><label id="product_name">Product Name</label></th>
+            <th><label id="product_sp">Price</label></th>
+            <th><label id="quantity"> Quantity</label></th>
+            <th><label id="total"> Total</label></th>
+            </div>
         </tr>
-        <tr></tr>
+        <tr>
+        <div class="Labels">
         <td><input type="text" id="show_product_id" onblur="fetchProduct()"> </td>
         <td><input type="text" id="show_product_name"></td>
         <td><input type="text" id="show_product_sp"></td>
         <td><input type="text" id="show_quantity"></td>
         <td><input type="total" id="show_total"  onfocus="calculate()"></td>
-      </tr>       
+      </tr> 
+    </div>      
       <tr><td colspan="2">
             <button type="button" onclick="addTableRow()">Add Row</button>
           </td>
@@ -45,6 +49,7 @@
     </table>
     <div><button type="submit" id="sales_update" onclick="salesupdate()">Complete</button></div>
   </form>
+  <script src="fetch_sales_data.js"></script>
 
  
 </body>

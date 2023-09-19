@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform" action="" style="width: 50%;">
+        <fieldset>
+            <legend>Print window</legend>
+            <input type="text" placeholder="Enter your name" id="name" >
+            <input type="text" placeholder="Enter Address" id="address">
+            <input type="number" placeholder="Enter phone number" id="phone" >
+
+        </fieldset>
+    </form>
+    <button type="button" onclick="printPage(myform)">Print</button>
+</body>
+<script>
+    function printPage(myform){
+        var printdata = document.getElementById("myform");
+        newwin = window.open("");
+        newwin = document.write(printdata.outerHTML);
+        newwin.print();
+        newwin.close();
+    }
+</script>
+</html>

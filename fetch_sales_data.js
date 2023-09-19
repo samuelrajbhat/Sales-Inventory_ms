@@ -123,9 +123,9 @@ function totalpayment(){
       productId = document.getElementById('show_product_id'+i).value;
       quantity = document.getElementById('show_quantity'+i).value;
     //sendRowData(productId, quantity, customerName);
-    //alert(productId);
-    //alert(quantity);
-    //alert(customerName);
+    alert(productId);
+    alert(quantity);
+    alert(customerName);
     
 
     
