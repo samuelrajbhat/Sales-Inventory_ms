@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#topDiv {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f0f0f0; /* Regular background color */
+    color: #333; /* Regular text color */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect for color change */
+}
+
+/* Hover styles for the table header cells */
+th:hover {
+    background-color: #333; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+ td:hover{
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+ 
+.placeholder-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color:beige; /* Placeholder background color */
+    /* Add any other styling for the placeholder table */
+}
+
+.chart-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align the charts to the left */
+    margin: 30px auto;
+    max-width: 90vh; /* Limit the width of the charts */
+    overflow-x: scroll;
+     /* Add horizontal scroll for smaller screens if needed */
+    background-color: aliceblue;
+    }
+
+.chart {
+    border: 1px solid #ccc;
+    margin-right: 20px; /* Add spacing between charts */
+    flex: 1;
+    max-width: 100%; /* Ensure the charts fit within the container */
+}
+
+canvas {
+    flex: 1;
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
+
+.chart:hover {
+    transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+/* Responsive table styles */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        display: block;
+        width: 100%;
+    }
+
+    .chart-container {
+        flex-direction: column; /* Stack charts vertically on smaller screens */
+        align-items: center; /* Center align charts on smaller screens */
+    }
+}

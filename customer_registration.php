@@ -38,14 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $sql= "INSERT INTO customers(customerName, cPhone , cAddress) VALUES('$name', '$phone','$address')";
 
-if ($conn->query($sql) === true) {
+if ($connection->query($sql) === true) {
   echo "Customer registred sucessfully successfully.";
 } 
 else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+  echo "Error: " . $sql . "<br>" . $connection->error;
 
 }
-$conn->close();
+$connection->close();
 
 
 }
